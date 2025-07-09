@@ -265,13 +265,11 @@ class AuthController extends Controller
    
     public function redirectToInstagram()
     {
-        //   return Socialite::driver('instagram')
-        //     ->scopes(['user_profile', 'user_media'])
-        //     ->redirect();
+          return Socialite::driver('instagram')
+            ->scopes(['user_profile', 'user_media'])
+            ->redirect();
 
-        return Socialite::driver('facebook')
-        ->scopes(['instagram_basic', 'pages_show_list', 'pages_read_engagement'])
-        ->redirect();
+       
     }
 
     public function handleInstagramCallback(Request $request)
